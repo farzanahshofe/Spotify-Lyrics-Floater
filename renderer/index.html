@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Lyrics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="drag-handle" class="interactive-zone">
+    <span id="track-info">Not connected</span>
+    <div id="controls">
+      <label class="switch" id="lock-switch" title="Lock pane: move, resize, and click anywhere">
+        <input type="checkbox" id="lock-toggle" />
+        <span class="switch-track"><span class="switch-thumb"></span></span>
+        <span class="switch-label">Lock</span>
+      </label>
+      <button id="connect-btn" title="Connect Spotify">Connect</button>
+      <button id="hide-btn" title="Hide (reopen from tray)">&#8211;</button>
+    </div>
+  </div>
+
+  <div id="lyrics-container" class="interactive-zone">
+    <div id="lyrics-empty">Open Spotify and hit Connect to get started.</div>
+    <div id="lyrics-lines"></div>
+  </div>
+
+  <div id="resize-grip" class="interactive-zone"></div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

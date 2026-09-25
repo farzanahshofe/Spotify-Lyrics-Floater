@@ -1,0 +1,35 @@
+{
+  "name": "spotify-lyrics-floater",
+  "version": "1.0.0",
+  "description": "A floating, always-on-top synced lyrics overlay for Spotify Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0",
+    "node-fetch": "^2.7.0"
+  },
+  "build": {
+    "appId": "com.example.spotifylyricsfloater",
+    "productName": "Spotify Lyrics Floater",
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "renderer/**/*",
+      "assets/**/*",
+      "config.json"
+    ],
+    "mac": { "category": "public.app-category.music" },
+    "win": { "target": "nsis" },
+    "linux": { "target": "AppImage" }
+  }
+}
